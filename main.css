@@ -1,0 +1,52 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.header{
+    color: red;
+}
+
+ul.base-list{
+    list-style: none;
+}
+ul.base-list li{
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+li.red{
+    background-color: red;
+}
+li.green{
+    background-color: green;
+}
+
+li.blue{
+    background-color: blue;
+}
+.base-container{
+    height: 300px;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.landing-screen{
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+.block-text-in-the-center{
+    border: 5px solid black;
+    border-radius: 10px;
+    transform: rotate(45deg)
+}
+.title-text{
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+}
