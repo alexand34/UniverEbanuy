@@ -1,0 +1,21 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+    background: #f00;
+}
+.ui-widget.ui-widget-content{
+    border: 5px solid blue;
+}
+.content-block{
+    padding: 10px;
+    border-bottom: 1px solid #666666;
+}
+.ui-menu { 
+    width: 150px; 
+}
