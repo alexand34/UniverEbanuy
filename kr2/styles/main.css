@@ -6,4 +6,182 @@
 html, body{
     width: 100%;
     min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.main{
+    width: 100%;
+    background: cyan;
+    min-height: 100vh;
+}
+.map{
+    width: 100%;
+    min-height: 500px;
+}
+
+
+
+.rotating {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background: #f00;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.stage{
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 20px;
+}
+.dick{
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 200px;
+    height: 200px;
+-moz-transform:50% top;
+}
+.bollock{
+    width:50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50px;;
+    border-right: 2px solid #000000;
+    border-top: 2px solid #000000;
+    background: #ffffff;
+    z-index: 1;
+}
+.left{
+    left:-50px;
+    border-right:none;
+    border-left: 2px solid #000000;
+    border-top: 2px solid #000000;
+}
+
+.shaft{
+    border-top: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    width:40px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50px;;
+    left:-20px;
+    top:-125px;
+-moz-transform-origin:50% bottom;        
+-webkit-transform-origin:50% bottom;
+transform-origin:50% bottom;
+}
+.hl{
+    width:19px;
+    height: 18px;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    float: left;
+    border-radius: 50px 0px 0px 0px;
+}
+.hr{
+    width:19px;
+    height: 18px;
+    border-bottom: 2px solid #000000;
+    float: left;
+    border-radius: 0px 50px 0px 0px;
+}
+
+.spinner-container{
+    display: none;
+    width: 100%;
+    background: cyan;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.profile-photo-container{
+    margin-top: 10px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 10px;
+    background: lightgray;
+
+}
+.profile-photo-container img{
+    max-width: 100%;
+}
+
+.author-column{
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.blog-container{
+    background: white;
+    border: 1px solid #999;
+    box-shadow: 0px 0px 10px 2px #999;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+}
+
+.post-container{
+    border-bottom: 0.5px solid #999;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.post-header{
+    font-size: 1.3em;
+    color: #333333;
+    padding: 5px 0;
+}
+.post-header:hover{
+    color: blue;
+    cursor: pointer;
 }
