@@ -54,7 +54,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAdapters\CinemasDataAdapter.cs" />
+    <Compile Include="DataAdapters\CitiesDataAdapter.cs" />
     <Compile Include="DataAdapters\CountriesDataAdapter.cs" />
+    <Compile Include="Model\Cinema.cs" />
+    <Compile Include="Model\City.cs" />
     <Compile Include="Model\Country.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
