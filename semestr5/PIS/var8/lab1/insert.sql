@@ -9,6 +9,7 @@ values ('Kiyv', 1), ('Lviv', 1), ('Kharkiv', 1),
 ('Berlin', 3), ('Wesse', 3), ('Frankurt', 3)
 GO
 
+
 insert Cinemas (Name, CityId)
 values ('Multiplex', 1), ('Zhovten', 1),
 ('Multiplex', 2), ('Forum', 2),
@@ -18,3 +19,5 @@ values ('Multiplex', 1), ('Zhovten', 1),
 ('Landmark', 11),
 ('Big Bang', 12)
 GO
+
+delete from  Cinemas
