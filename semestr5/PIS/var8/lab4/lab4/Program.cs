@@ -20,7 +20,14 @@ namespace lab4
 
                 ctx.SaveChanges();
 
-               
+                var validationErrors = ctx.GetValidationErrors()
+                    .Where(x => !x.IsValid)
+                    .SelectMany(x => x.ValidationErrors);
+
+                foreach (var error in validationErrors)
+                {
+                    Console.WriteLine(error.ErrorMessage);
+                }
             }
 
             Console.ReadKey();
