@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="toolbar">
+        <button mat-button (click)="addZone()">Додати складську зону</button>
+    </div>
+    <div class="main-content">
+        <div *ngFor="let warehouse of warehoues" class="warehouse-zone" (click)="toggleCategories(warehouse)">
+            <div class="color-label" [ngStyle]="{backgroundColor : warehouse.color}"></div>
+            {{warehouse.location}} - {{warehouse.name}}
+            <div class="hidden-categories" [ngClass]="{show: warehouse.Expand}"
+                *ngIf="warehouse.categories && warehouse.categories.length > 0">
+                <ul>
+                    <li *ngFor="let cat of warehouse.categories">
+                        {{cat.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

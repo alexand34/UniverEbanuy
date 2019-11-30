@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ARoom.Common\ARoom.Common.csproj" />
+    <ProjectReference Include="..\ARoom.Data\ARoom.Data.csproj" />
+    <ProjectReference Include="..\ARoom.Dto\ARoom.Dto.csproj" />
+  </ItemGroup>
+
+</Project>

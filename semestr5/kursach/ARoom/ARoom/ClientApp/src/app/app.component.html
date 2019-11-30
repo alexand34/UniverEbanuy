@@ -1,0 +1,25 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side">
+    <div class="side-menu">
+      <div class="header">
+        <a [routerLink]="['/']" routerLinkActive="router-link-active" class="header-home"> <h1>aRoom</h1></a>
+      </div>
+      <a [routerLink]="['/goods']" routerLinkActive="router-link-active" class="route">
+        <div>
+          <i class="fab fa-apple"></i>Товари
+        </div>
+      </a>
+      <a [routerLink]="['/goods']" routerLinkActive="router-link-active" class="route">
+        <div>
+          <i class="fa fa-list"></i>Категорії
+        </div>
+      </a>
+      <a [routerLink]="['/warehouse']" routerLinkActive="router-link-active" class="route">
+        <div>
+          <i class="fa fa-cube"></i>Склад
+        </div>
+      </a>
+    </div>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

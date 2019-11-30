@@ -1,0 +1,23 @@
+.warehouse-zone{
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    .color-label{
+        background-color: rgb(0, 255, 68);
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+.hidden-categories{
+    height: 0;
+    overflow: hidden;
+}
+
+.hidden-categories.show{
+    overflow: auto;
+    height: 100%;
+}
