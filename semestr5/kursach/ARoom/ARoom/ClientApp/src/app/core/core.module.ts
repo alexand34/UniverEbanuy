@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
 // @NgModule decorator with its metadata
 @NgModule({
     declarations: [],
@@ -14,7 +16,9 @@ import {MatInputModule} from '@angular/material/input';
         HttpClientModule,
         FormsModule,
         MatDialogModule,
-        MatInputModule
+        MatInputModule,
+        MatTableModule,
+        MatSelectModule
     ],
     providers: [],
     exports: [
@@ -23,7 +27,9 @@ import {MatInputModule} from '@angular/material/input';
         MatButtonModule, 
         HttpClientModule,
         MatDialogModule,
-        FormsModule
+        FormsModule,
+        MatTableModule,
+        MatSelectModule
     ]
 })
 

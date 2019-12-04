@@ -10,5 +10,7 @@ namespace ARoom.Dto.Dtos
         public string Name { get; set; }
         public int ZoneId { get; set; }
         public string Shelving { get; set; }
+        public WarehouseZoneDto Zone { get; set; }
+        public int GoodsCount { get; set; }
     }
 }

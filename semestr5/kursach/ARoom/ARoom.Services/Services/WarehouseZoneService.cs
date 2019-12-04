@@ -34,6 +34,13 @@ namespace ARoom.Services.Services
             return returnData;
         }
 
+        public List<WarehouseZoneSimpleDto> GetZonesSimple()
+        {
+            var data = this._warehouseRepository.Query().Select(x => _mapper.Map<WarehouseZoneSimpleDto>(x)).ToList();
+
+            return data;
+        }
+
         public void AddZone(WarehouseZone zone)
         {
             this._warehouseRepository.Add(zone);

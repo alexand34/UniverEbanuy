@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {path : 'home', loadChildren: './Home/home.module#HomeModule' },
   {path : 'goods', loadChildren: './Goods/goods.module#GoodsModule' },
+  {path : 'categories', loadChildren: './Categories/category.module#CategoriesModule' },
   {path : 'warehouse', loadChildren: './WarehouseZone/warehouse.module#WarehouseModule' },
   {path : '', redirectTo : '/home', pathMatch : 'full'}
 ];

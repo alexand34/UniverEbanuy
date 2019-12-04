@@ -14,6 +14,7 @@ namespace ARoom.Services
         {
             services.AddTransient<IGoodService, GoodsService>();
             services.AddTransient<IWarehouseZonesService, WarehouseZoneService>();
+            services.AddTransient<ICategoryService, CategoryService>();
         }
     }
 }

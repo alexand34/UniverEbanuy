@@ -31,7 +31,7 @@ namespace ARoom
             services.AddControllersWithViews();
             services.AddDbContext<aRoomContext>(options =>
             {
-                options.UseSqlServer("Server=DESKTOP-6SUS1UN;Database=aRoom;Trusted_Connection=True;");
+                options.UseSqlServer("Server=DESKTOP-6SUS1UN;Database=aRoom;Trusted_Connection=True;MultipleActiveResultSets=true");
             });
 
             services.ConfigureRepositories();

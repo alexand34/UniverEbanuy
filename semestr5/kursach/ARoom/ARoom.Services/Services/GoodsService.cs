@@ -20,10 +20,10 @@ namespace ARoom.Services.Services
             this._mapper = mapper;
         }
 
-        public List<GoodDto> GetGoods(out int totalCount, string search = "", int pageSize = 25, int page = 1)
+        public List<GoodDto> GetGoods(int categoryId, out int totalCount, string search = "", int pageSize = 25, int page = 1)
         {
             search = search.ToLower();
-            var query = this._goodsRepository.Query().Where(x => (string.IsNullOrEmpty(search)
+            var query = this._goodsRepository.Query().Where(x => (categoryId == -1 || x.CategoryId == categoryId) && (string.IsNullOrEmpty(search)
                                                                   || x.Name.ToLower().Contains(search)
                                                                   || x.ItemUniqueId.Contains(search)))
                 .Select(x => _mapper.Map<GoodDto>(x));
@@ -46,12 +46,30 @@ namespace ARoom.Services.Services
                 CategoryId = good.CategoryId,
                 Price = good.Price,
                 ShortCharacteristics = good.ShortCharacteristics,
-                Characteristics = good.Characteristics
+                Characteristics = good.Characteristics,
+                ItemUniqueId = ""
             };
 
             this._goodsRepository.Add(dbGood);
-            dbGood.ItemUniqueId = $"{dbGood.Category.Name.Substring(0, 2)}{dbGood.CategoryId}{dbGood.Name.Substring(0, 2)}{dbGood.Id}";
-            this._goodsRepository.SaveChanges();;
+            this._goodsRepository.SaveChanges();
+
+            dbGood.ItemUniqueId = $"{dbGood.CategoryId}{dbGood.Name.Substring(0, 2)}{dbGood.Id}";
+            this._goodsRepository.SaveChanges();
+        }
+
+        public void UpdateGood(GoodDto good)
+        {
+            var dbGood = _goodsRepository.GetByUniqueNumber(good.ItemUniqueId);
+
+            dbGood.Name = good.Name;
+            dbGood.Amount = good.Amount;
+            dbGood.CategoryId = good.CategoryId;
+            dbGood.Price = good.Price;
+            dbGood.ShortCharacteristics = good.ShortCharacteristics;
+            dbGood.Characteristics = good.Characteristics;
+
+            this._goodsRepository.Update(dbGood);
+            this._goodsRepository.SaveChanges(); ;
         }
     }
 }

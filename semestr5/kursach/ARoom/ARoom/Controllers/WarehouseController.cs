@@ -27,6 +27,13 @@ namespace ARoom.Controllers
             return zonesService.GetZones();
         }
 
+        [HttpGet]
+        [Route("getZonesSimple")]
+        public List<WarehouseZoneDto> GetZonesSimple()
+        {
+            return zonesService.GetZones();
+        }
+
         [HttpPost]
         [Route("add")]
         public void AddZone(WarehouseZone zone)

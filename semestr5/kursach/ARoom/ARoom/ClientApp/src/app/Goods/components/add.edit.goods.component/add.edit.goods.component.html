@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Add zone</h1>
+<div mat-dialog-content>
+  <p>Назва</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="good.name">
+  </mat-form-field>
+  <p>Характеристики</p>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="good.characteristics">
+      </textarea>
+  </mat-form-field>
+  <p>Короткі характеристики</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="good.shortCharacteristics">
+  </mat-form-field>
+  <p>Категорія</p>
+  <mat-select [(value)]="good.categoryId">
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</mat-option>
+  </mat-select>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Відміна</button>
+  <button mat-button (click)="addEditGood()" cdkFocusInitial>Додати</button>
+</div>

@@ -16,4 +16,8 @@ export class WarehouseService {
     addWarehouse(warehouse: any){
         return this.http.post('api/warehouse/add', warehouse);
     }
+
+    getWarehousesSimple(){
+        return this.http.get('api/warehouse/getZonesSimple');
+    }
 }

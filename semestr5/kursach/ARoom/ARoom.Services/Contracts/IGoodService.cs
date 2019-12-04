@@ -8,8 +8,9 @@ namespace ARoom.Services.Contracts
 {
     public interface IGoodService
     {
-        List<GoodDto> GetGoods(out int totalCount, string search = "", int pageSize = 25, int page = 0);
+        List<GoodDto> GetGoods(int categoryId, out int totalCount, string search = "", int pageSize = 25, int page = 0);
         GoodDto GetGoodByUniqueNumber(string number);
         void AddGood(GoodDto good);
+        void UpdateGood(GoodDto good);
     }
 }

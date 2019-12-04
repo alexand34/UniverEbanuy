@@ -36,4 +36,14 @@ mat-sidenav-container{
     display:flex;
     justify-content:flex-end;
     align-items:center; 
-  } 
+} 
+.color-label{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+mat-form-field{
+    width: 100%;
+}

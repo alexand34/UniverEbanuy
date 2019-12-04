@@ -1,7 +1,7 @@
 ﻿using ARoom.Common.Model;
 using ARoom.Dto.Dtos;
 using AutoMapper;
-
+using System.Linq;
 
 namespace ARoom.Dto
 {
@@ -10,8 +10,11 @@ namespace ARoom.Dto
         public MappingProfile()
         {
             CreateMap<Good, GoodDto>();
-            CreateMap<Category, CategoryDto>();
+            CreateMap<WarehouseZone, WarehouseZoneSimpleDto>();
+            CreateMap<Category, CategoryDto>()
+                .ForMember(x => x.GoodsCount, opts => opts.MapFrom(t => t.Goods.Count()));
             CreateMap<WarehouseZone, WarehouseZoneDto>();
+            CreateMap<Category, CategorySimpleDto>();
         }
     }
 }

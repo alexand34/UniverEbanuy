@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GoodsModule } from './Goods/goods.module';
 import { CoreModule } from './core/core.module';
 import { WarehouseModule } from './WarehouseZone/warehouse.module';
+import { CategoriesModule } from './Categories/category.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -23,7 +24,8 @@ import { WarehouseModule } from './WarehouseZone/warehouse.module';
     BrowserAnimationsModule,
     GoodsModule,
     CoreModule,
-    WarehouseModule
+    WarehouseModule,
+    CategoriesModule
   ],
   providers: [],
   bootstrap: [AppComponent],
