@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ТЗІ - лаб</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Статичний аналіз тексту</h1>
+            </div>
+            <div class="col-md-12 row">
+                <input type="text" class="form-control" id="basic-input" style="width: 500px" />
+                <button class="btn btn-primary" onclick="analyzeText()">Аналіз</button>
+            </div>
+            <div class="col-md-12 row">
+                <div id="chart1"></div>
+            </div>
+            <div class="col-md-12 row">
+                <div id="chart2"></div>
+            </div>
+            <div class="col-md-12 row">
+                <div id="chart3"></div>
+            </div>
+            <div class="col-md-12 row">
+                <div id="chart4"></div>
+            </div>
+
+            <div class="col-md-12">
+                <h1>Текст зашифрований алгоритмом Цезаря</h1>
+            </div>
+            <div class="col-md-12 row">
+                <input id="caesarShift" type="text" class="form-control" disabled>
+            </div>
+            <div class="col-md-12 row">
+                <div id="chart5"></div>
+            </div>
+            <div class="col-md-12 row">
+                <div id="chart6"></div>
+            </div>
+            <div class="col-md-12 row">
+                <div id="chart7"></div>
+            </div>
+            <div class="col-md-12 row">
+                <div id="chart8"></div>
+            </div>
+            <div class="col-md-12">
+                <h1>Текст розшифрований алгоритмом Цезаря</h1>
+            </div>
+            <div class="col-md-12 row">
+                <input id="caesarUnshift" type="text" class="form-control" disabled>
+            </div>
+            <div class="col-md-12">
+                <h1>Текст зашифрований методом підстановки</h1>
+            </div>
+            <div class="col-md-12 row">
+                <input id="substitutionShift" type="text" class="form-control" disabled>
+            </div>
+
+            <div class="col-md-12">
+                <h1>Текст розшифрований методом підстановки</h1>
+            </div>
+            <div class="col-md-12 row">
+                <input id="substitutionUnshift" type="text" class="form-control" disabled>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
